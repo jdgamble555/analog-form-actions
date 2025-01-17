@@ -1,7 +1,20 @@
 <script lang="ts">
-  import { RouterOutlet } from '@angular/router' with { analog: 'imports' };
+  import { RouterOutlet, RouterLink } from '@angular/router' with { analog: 'imports' };
+
+  defineMetadata({
+    imports: [RouterOutlet, RouterLink]
+  });
 </script>
 
 <template>
-  <router-outlet />
+  <main class="flex flex-col items-center justify-center gap-5 mt-5">
+    <h2 class="text-3xl">Analog Form Actions Demo</h2>
+
+    <router-outlet />
+
+    <nav class="flex gap-5">
+      <a class="underline hover:no-underline" routerLink="/">Home</a>
+      <a class="underline hover:no-underline" routerLink="/newsletter">Newsletter</a>
+    </nav>
+  </main>  
 </template>
