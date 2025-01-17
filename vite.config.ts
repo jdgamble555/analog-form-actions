@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => ({
       },
       vite: { experimental: { supportAnalogFormat: true } },
       nitro: {
-        preset: 'vercel_edge'
+        preset: 'vercel'
       }
     }),
   ],
