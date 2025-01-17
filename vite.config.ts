@@ -14,13 +14,13 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     analog({
       ssr: false,
-      static: true,
+      static: false,
       prerender: {
         routes: [],
       },
       vite: { experimental: { supportAnalogFormat: true } },
       nitro: {
-        preset: 'vercel'
+        preset: 'vercel-edge'
       }
     }),
   ],
