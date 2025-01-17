@@ -19,6 +19,9 @@ export default defineConfig(({ mode }) => ({
         routes: [],
       },
       vite: { experimental: { supportAnalogFormat: true } },
+      nitro: {
+        preset: 'vercel-edge'
+      }
     }),
   ],
 }));
